@@ -83,7 +83,7 @@ export default function ProductCard({ productID, ...props }) {
                 </IconButton>
             </Box>}
         </Box>
-        {isHover && <Grid container justifyContent="center">
+        {isHover && <Grid container justify="center">
             <Grid item>
                 <Button variant="outlined" className={classes.cartButton}>
                     <ShoppingCartOutlined />
@@ -94,7 +94,7 @@ export default function ProductCard({ productID, ...props }) {
         <Box
             padding="0 24px"
         >
-            <Grid container justifyContent="space-between" alignItems="center">
+            <Grid container justify="space-between" alignItems="center">
                 <Grid item>
                     <Rating
                         name="hover-feedback"
