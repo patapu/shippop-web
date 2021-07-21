@@ -44,7 +44,7 @@ function App() {
   const theme = useMemo(() => createTheme({
     palette: {
       ...palette,
-      mode: setting.theme
+      type: setting.theme
     },
     ...otherTheme
   }), [setting.theme]);

@@ -1,6 +1,7 @@
-import { Button, Card, CardHeader, Grid, Paper, Typography } from '@material-ui/core'
+import { Button, Card, CardHeader, Grid, ListItem, ListItemText, Paper, Switch, Typography } from '@material-ui/core'
 import React, { useContext } from 'react'
 import ProductCard from '../../components/Card/ProductCard'
+import { AppContext } from '../../contexts/AppContext'
 import { CartContext } from '../../contexts/CartContext'
 
 const getItem = id => ({
@@ -17,7 +18,17 @@ const getItem = id => ({
 
 export default function Home(props) {
 	const { addItem } = useContext(CartContext)
+	const { toggleTheme, setting } = useContext(AppContext)
 	return <Paper square>
 		<ProductCard item={getItem(1)} />
+		<ListItem>
+		<ListItemText primary={
+			setting.theme === 'dark'
+			? 'Dark'
+			: 'Light'
+			}
+		/>
+		<Switch checked={setting.theme !== 'dark'} onChange={() => toggleTheme()}/>
+		</ListItem>
 	</Paper>
 }
