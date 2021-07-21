@@ -1,7 +1,8 @@
 import './App.css';
 import { Waiter } from 'react-wait';
 import { ThemeProvider } from '@material-ui/styles';
-import { createTheme, CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles';
 import { AppContext } from './contexts/AppContext';
 import { useContext } from 'react';
 import { useMemo } from 'react';
